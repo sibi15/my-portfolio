@@ -1,0 +1,686 @@
+/* Dark Mode Variables */
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #333333;
+  --accent-color: #4a4a4a;
+  --light-accent: #666666;
+  --text-color: #1a1a1a;
+  --light-text: #666666;
+  --background: #ffffff;
+  --light-background: #f5f5f5;
+  --border-color: #e0e0e0;
+  --transition: all 0.3s ease;
+  --section-padding: 5rem 0;
+  --container-width: 1200px;
+  --border-radius: 0.5rem;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --input-background: #ffffff;
+  --input-border: #e0e0e0;
+  --input-text: #1a1a1a;
+  --card-background: #ffffff;
+  --icon-background: #f5f5f5;
+  --icon-color: #1a1a1a;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --primary-color: #ffffff;
+  --secondary-color: #e0e0e0;
+  --accent-color: #808080;
+  --light-accent: #a0a0a0;
+  --text-color: #ffffff;
+  --light-text: #cccccc;
+  --background: #121212;
+  --light-background: #1e1e1e;
+  --border-color: #333333;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --input-background: #2d2d2d;
+  --input-border: #404040;
+  --input-text: #ffffff;
+  --card-background: #1e1e1e;
+  --icon-background: #ffffff;
+  --icon-color: #121212;
+  background-color: #121212 !important;
+}
+
+/* Logo styles for dark mode */
+body.dark-mode .logo {
+  color: var(--primary-color);
+}
+
+body.dark-mode .logo-text {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .logo-full {
+  color: var(--primary-color);
+}
+
+/* Ensure all elements use dark mode colors */
+body.dark-mode .nav,
+body.dark-mode .nav.scrolled,
+body.dark-mode .card,
+body.dark-mode .skill-item,
+body.dark-mode .language-item,
+body.dark-mode .certification-item,
+body.dark-mode .achievement-item,
+body.dark-mode .highlight-item,
+body.dark-mode .accordion-item,
+body.dark-mode .accordion-header,
+body.dark-mode .accordion-content,
+body.dark-mode .footer {
+  background-color: #1e1e1e !important;
+  color: #f5f5f5 !important;
+}
+
+/* Ensure text colors are properly set in dark mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode a {
+  color: #f5f5f5 !important;
+}
+
+body.dark-mode .light-text {
+  color: #cccccc !important;
+}
+
+/* Update existing styles to use CSS variables */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--background);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Update card backgrounds for dark mode */
+.card {
+  background-color: var(--light-background);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Update skill items for dark mode */
+.skill-item {
+  background-color: var(--light-background);
+  transition: background-color 0.3s ease;
+}
+
+/* Update language items for dark mode */
+.language-item {
+  background-color: var(--light-background);
+  transition: background-color 0.3s ease;
+}
+
+/* Update certification items for dark mode */
+.certification-item {
+  background-color: var(--light-background);
+  transition: background-color 0.3s ease;
+}
+
+/* Update achievement items for dark mode */
+.achievement-item {
+  background-color: var(--light-background);
+  transition: background-color 0.3s ease;
+}
+
+/* Update highlight items for dark mode */
+.highlight-item {
+  background-color: var(--light-background);
+  transition: background-color 0.3s ease;
+}
+
+/* Update data analysis content for dark mode */
+.data-analysis-content p {
+  background-color: var(--light-background);
+  transition: background-color 0.3s ease;
+}
+
+/* Update accordion items for dark mode */
+.accordion-item {
+  background-color: var(--light-background);
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header {
+  background-color: var(--light-background);
+  transition: background-color 0.3s ease;
+}
+
+.accordion-content {
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+/* Update skill level background for dark mode */
+.skill-level {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Update language level badge for dark mode */
+.language-level {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Update icon wrappers for dark mode - exact opposite of light mode */
+body.dark-mode .accordion-icon-wrapper,
+body.dark-mode .certification-icon,
+body.dark-mode .achievement-icon,
+body.dark-mode .skill-icon,
+body.dark-mode .language-icon,
+body.dark-mode .data-analysis-icon {
+  background-color: var(--primary-color) !important;
+  color: var(--background) !important;
+}
+
+/* Update skill level background for dark mode - exact opposite of light mode */
+body.dark-mode .skill-level {
+  background-color: var(--primary-color) !important;
+  color: var(--background) !important;
+}
+
+/* Update language level badge for dark mode - exact opposite of light mode */
+body.dark-mode .language-level {
+  background-color: var(--primary-color) !important;
+  color: var(--background) !important;
+}
+
+/* Update icons in expanded sections for dark mode - exact opposite of light mode */
+body.dark-mode .accordion-item.expanded .accordion-icon-wrapper,
+body.dark-mode .accordion-item.expanded .certification-icon,
+body.dark-mode .accordion-item.expanded .achievement-icon,
+body.dark-mode .accordion-item.expanded .skill-icon,
+body.dark-mode .accordion-item.expanded .language-icon,
+body.dark-mode .accordion-item.expanded .data-analysis-icon {
+  background-color: var(--primary-color) !important;
+  color: var(--background) !important;
+}
+
+/* Update skill level background for dark mode in expanded sections - exact opposite of light mode */
+body.dark-mode .accordion-item.expanded .skill-level {
+  background-color: var(--primary-color) !important;
+  color: var(--background) !important;
+}
+
+/* Update language level badge for dark mode in expanded sections - exact opposite of light mode */
+body.dark-mode .accordion-item.expanded .language-level {
+  background-color: var(--primary-color) !important;
+  color: var(--background) !important;
+}
+
+/* Base toggle button styles (light mode) */
+.accordion-toggle {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-item.expanded .accordion-toggle,
+.accordion-item.active .accordion-toggle {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--primary-color);
+  transform: rotate(180deg);
+}
+
+.accordion-toggle i,
+.accordion-toggle svg {
+  color: inherit;
+  fill: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode toggle button styles */
+body.dark-mode .accordion-toggle {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+body.dark-mode .accordion-item.expanded .accordion-toggle,
+body.dark-mode .accordion-item.active .accordion-toggle {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  transform: rotate(180deg);
+}
+
+body.dark-mode .accordion-toggle i,
+body.dark-mode .accordion-toggle svg {
+  color: inherit;
+  fill: inherit;
+}
+
+/* Update mobile menu for dark mode */
+@media (max-width: 768px) {
+  .nav-links {
+    background-color: var(--light-background);
+    transition: background-color 0.3s ease;
+  }
+}
+
+/* Update accordion content for dark mode */
+body.dark-mode .accordion-content {
+  background-color: var(--light-background) !important;
+  color: var(--text-color) !important;
+}
+
+/* Update expanded accordion items for dark mode */
+body.dark-mode .accordion-item.expanded {
+  background-color: var(--light-background) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.dark-mode .accordion-item.expanded .accordion-header {
+  background-color: var(--light-background) !important;
+  color: var(--text-color) !important;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  padding: 6rem 0;
+  background-color: var(--background);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.contact-header p {
+  font-size: 1.25rem;
+  color: var(--light-text);
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Contact Info Styles */
+.contact-info {
+  position: sticky;
+  top: 2rem;
+}
+
+.info-card {
+  background: var(--card-background);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: var(--box-shadow);
+  height: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.info-header h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.info-header p {
+  color: var(--light-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.info-icon {
+  background: var(--icon-background);
+  color: var(--icon-color);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover .info-icon {
+  transform: translateY(-3px);
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.info-text {
+  flex: 1;
+}
+
+.info-text h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.info-text p,
+.info-text a {
+  color: var(--light-text);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.info-text a:hover {
+  color: var(--text-color);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.social-link {
+  background: var(--icon-background);
+  color: var(--icon-color);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Contact Form Styles */
+.contact-form {
+  width: 100%;
+}
+
+.form-card {
+  background: var(--card-background);
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: var(--box-shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form-header h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.form-header p {
+  color: var(--light-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-field {
+  margin-bottom: 2rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--input-border);
+  border-radius: 0.75rem;
+  background: var(--input-background);
+  color: var(--input-text);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1.25rem;
+  background: #ffffff;
+  color: var(--text-color);
+  border: 1px solid var(--input-border);
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: var(--primary-color);
+  color: var(--background);
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+}
+
+/* Dark Mode Specific Styles */
+body.dark-mode .info-card,
+body.dark-mode .form-card {
+  background: var(--card-background);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .info-icon,
+body.dark-mode .social-link {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+}
+
+body.dark-mode .info-item:hover .info-icon,
+body.dark-mode .social-link:hover {
+  background: var(--accent-color);
+  color: var(--background);
+}
+
+body.dark-mode .form-field input,
+body.dark-mode .form-field textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+}
+
+body.dark-mode .form-field input:focus,
+body.dark-mode .form-field textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .submit-btn {
+  background: var(--accent-color);
+  color: var(--background);
+  border: none;
+}
+
+body.dark-mode .submit-btn:hover {
+  background: var(--text-color);
+  color: var(--background);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .contact-content {
+    gap: 2rem;
+  }
+  
+  .info-card,
+  .form-card {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 5rem 0;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .contact-info {
+    position: static;
+  }
+  
+  .contact-header {
+    margin-bottom: 3rem;
+  }
+  
+  .contact-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 0;
+  }
+  
+  .contact-container {
+    padding: 0 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .info-card,
+  .form-card {
+    padding: 2rem;
+  }
+  
+  .info-header h3,
+  .form-header h3 {
+    font-size: 1.5rem;
+  }
+  
+  .info-icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+  
+  .contact-container {
+    padding: 0 1rem;
+  }
+  
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+  
+  .info-card,
+  .form-card {
+    padding: 1.5rem;
+  }
+  
+  .info-text h4 {
+    font-size: 1.125rem;
+  }
+  
+  .info-text p,
+  .info-text a {
+    font-size: 0.95rem;
+  }
+  
+  .social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+} 
